@@ -23,7 +23,7 @@ The project is organized into modular Terraform files, each responsible for a sp
 
 ```mermaid
 graph TD
-    A[Internet] -->|DNS: www.zozz.xyz| B(Route 53)
+    A[Internet] -->|www.yourdomainsite.xyz| B(Route 53)
     B -->|50% Weight| C[ALB us-east-1]
     B -->|50% Weight| D[ALB us-east-2]
     C --> E[WordPress EC2 us-east-1a]
@@ -88,7 +88,7 @@ The repository contains Terraform files, each with a specific purpose, and Ansib
   - Establishes VPC peering between **us-east-1** and **us-east-2** with appropriate route table updates.
 
 - **`route_53_LB.tf`**
-  - Configures Route 53 with a hosted zone for `zozz.xyz` and weighted A records for load balancers.
+  - Configures Route 53 with a hosted zone for `yourdomainsite.xyz` and weighted A records for load balancers.
 
 - **`outputs.tf`**
   - Outputs critical information like public/private IPs and security group IDs.
@@ -121,13 +121,13 @@ The repository contains Terraform files, each with a specific purpose, and Ansib
 - **AWS CLI** configured with appropriate credentials
 - **Ansible** installed on your local machine or Ansible control server
 - **SSH key pair** (`ec2-ansible.pem`) for EC2 access
-- **Domain** registered for Route 53 (e.g., `zozz.xyz`)
+- **Domain** registered for Route 53 (e.g., `yourdomainsite.xyz`)
 
 ### Setup Instructions
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/wordpress-multi-region-aws.git
+   git clone https://github.com/Ziad-Assem/Terraform-Ansible-AWS-Wordpress-Project.git
    cd wordpress-multi-region-aws
    ```
 
@@ -158,7 +158,7 @@ The repository contains Terraform files, each with a specific purpose, and Ansib
    - Ensure the `ec2-ansible.pem` file is in the project root with appropriate permissions (`chmod 400 ec2-ansible.pem`).
 
 6. **Access the Application**
-   - Visit `http://www.zozz.xyz` to access the WordPress site.
+   - Visit `http://www.yourdomainsite.xyz` to access the WordPress site.
    - Traffic is distributed across regions via Route 53 weighted routing.
 
 ---
@@ -202,26 +202,12 @@ The repository contains Terraform files, each with a specific purpose, and Ansib
 
 ---
 
-## 🌈 Future Improvements
+## 🌈 Future Improvement Plan
 
 - **Auto Scaling**: Add Auto Scaling Groups for WordPress instances to handle traffic spikes.
 - **RDS for MariaDB**: Replace EC2-based MariaDB with AWS RDS for managed databases.
 - **Secrets Management**: Use AWS Secrets Manager for database credentials.
 - **HTTPS**: Configure SSL certificates with AWS Certificate Manager for secure connections.
 - **CI/CD**: Integrate with GitHub Actions for automated deployments.
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙌 Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request with your improvements.
-
----
 
 **Happy Deploying!** 🚀
