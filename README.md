@@ -4,6 +4,10 @@ Welcome to the **WordPress Multi-Region AWS Deployment** project! This repositor
 
 ---
 
+
+![Terraform Project Diagram](terraform%20Project%20Diagram.gif)
+
+
 ## 🎯 Project Overview
 
 This project automates the deployment of a WordPress application with the following key features:
