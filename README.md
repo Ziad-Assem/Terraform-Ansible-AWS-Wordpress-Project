@@ -23,7 +23,7 @@ The project is organized into modular Terraform files, each responsible for a sp
 
 ```mermaid
 graph TD
-    A[Internet] -->|www.yourdomainsite.xyz| B(Route 53)
+    A[Internet] -->|yourdomainsite.xyz| B(Route 53)
     B -->|50% Weight| C[ALB us-east-1]
     B -->|50% Weight| D[ALB us-east-2]
     C --> E[WordPress EC2 us-east-1a]
