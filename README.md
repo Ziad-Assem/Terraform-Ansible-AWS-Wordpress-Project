@@ -1,12 +1,12 @@
 # 🌟 WordPress Multi-Region AWS Deployment with Terraform and Ansible
 
-Welcome to the **WordPress Multi-Region AWS Deployment** project! This repository provides a robust infrastructure setup for deploying a highly available WordPress application across two AWS regions (**us-east-1** and **us-east-2**) using **Terraform** for infrastructure provisioning and **Ansible** for configuration management. The setup includes VPC peering, load balancers, Route 53 for DNS, and secure networking with MariaDB databases in private subnets.
-
----
-
 
 ![Terraform Project Diagram](terraform%20Project%20Diagram.gif)
 
+
+Welcome to the **WordPress Multi-Region AWS Deployment** project! This repository provides a robust infrastructure setup for deploying a highly available WordPress application across two AWS regions (**us-east-1** and **us-east-2**) using **Terraform** for infrastructure provisioning and **Ansible** for configuration management. The setup includes VPC peering, load balancers, Route 53 for DNS, and secure networking with MariaDB databases in private subnets.
+
+---
 
 ## 🎯 Project Overview
 
