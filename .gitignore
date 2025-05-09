@@ -3,4 +3,5 @@
 *.pub
 *.tfstate.backup
 *.tfstate
-
+*.txt
+*.sh
