@@ -1,0 +1,6 @@
+*.zip
+*.pem
+*.pub
+*.tfstate.backup
+*.tfstate
+
